@@ -1,0 +1,12 @@
+syntax = "proto3";
+package cosm.cosm;
+
+import "gogoproto/gogo.proto";
+import "cosm/cosm/params.proto";
+
+option go_package = "cosm/x/cosm/types";
+
+// GenesisState defines the cosm module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
